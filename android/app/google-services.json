@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "728875223381",
+    "project_id": "caption-aee78",
+    "storage_bucket": "caption-aee78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728875223381:android:ce6a6fde95dc93d87087dc",
+        "android_client_info": {
+          "package_name": "com.example.captioning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728875223381-49r9608n8he4r33q1e635mobsh5mvdk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_t6hpSol2vyqLn9cvGsUR3zKeWNDyKjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728875223381-49r9608n8he4r33q1e635mobsh5mvdk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
