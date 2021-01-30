@@ -16,11 +16,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  
   bool uploaded = false;
   String imagePath = "";
   bool loading = false;
   List<String> finalCap = [];
+  List<String> toSent = [];
   List<ImageLabel> finalLabels = [];
   @override
   Widget build(BuildContext context) {
@@ -172,6 +172,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: uploaded
                               ? () {
                                   detectLabels();
+                                  toSent = finalCap;
+                                  finalCap.clear();
                                   Future.delayed(Duration(seconds: 2), () {
                                     if (finalCap.isNotEmpty) {
                                       print("length 0");
@@ -183,11 +185,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Captions(
-                                                    captions: finalCap,
+                                                    captions: toSent,
                                                     labels: finalLabels,
                                                   )));
-                                    }else
-                                    {
+                                    } else {
                                       setState(() {
                                         loading = false;
                                       });
@@ -240,7 +241,5 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       }
     }
-
-    print(finalCap);
   }
 }
